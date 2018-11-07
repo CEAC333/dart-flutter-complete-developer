@@ -360,29 +360,503 @@
   
   ### The Provider's 'of' Function
   
-  ### The 
+  ### The Provider's Constructor
+  
+  ### The Provider in Action
+  
+  ### Accesing the Bloc
+  
+  ### Breather and Review
+  
+  ### Enabling Form Submission
+  
+  ### Stream Merging Possibilities
 
 ## RxDart for Reactive Programming
 
+  ### Introducing RxDart
+  
+  ### More on RxDart
+  
+  ### The CombineLastest Function
+  
+  ### CombineLatest in Action
+  
+  ### More on StreamBuilder
+  
+  ### Interpreting Stream Values
+  
+  ### Broadcast Streams
+  
+  ### Disabled by Default
+  
+  ### Replacing Controllers with Subjects
+  
+  ### Review of BLOCs
+
 ## Building Delightful Animations
+
+  ### App Overview
+  
+  ### Animation Library Classes
+  
+  ### App Boilerplate
+  
+  ### StatefulWidgets for Animations
+  
+  ### Widget Structure
+  
+  ### Displaying a Cat
+  
+  ### The InitState Method
+  
+  ### Declaring the TickerProvider
+  
+  ### Tweens with Curves
+  
+  ### Performance Savings with AnimatedBuilder
+  
+  ### Nature of Animation
+  
+  ### Starting the Animation
+  
+  ### Watching for Taps with GestureDetector
+  
+  ### Reversing Animation States
+  
+  ### Building the Box
+  
+  ### Layouts with the Stack Widget
+  
+  ### Order of Drawing Widgets
+  
+  ### Add Center Widget
+  
+  ### Positioned Widgets
+  
+  ### Expanding Stack Dimensions
+  
+  ### Three Reasons for Strange Layouts
+  
+  ### Positioned Constrains
+  
+  ### Negative Offsets
+  
+  ### Stack Clip Settings
+  
+  ### Adjusting Tween Ranges
+  
+  ### Adding Box Flaps
+  
+  ### Rotating Widgets
+  
+  ### Rotation by Radians
+  
+  ### Changing Rotation Point
+  
+  ### A Touch of Positioning
+  
+  ### BoxAnimation Controller
+  
+  ### Adding Animated Builders
+  
+  ### Resetting Animations
+  
+  ### Constraining Animation Range
+  
+  ### Adding the Right Flap
+  
+  ### Negative Rotation Values
+  
+  ### Toggling Animation State
+  
+  ### Animation Wrapup
 
 ## Performant Data Fetching
 
+  ### App Overview
+  
+  ### Hacker News API
+  
+  ### More API Challenges
+  
+  ### API Peformance Strategy
+  
+  ### Creating the ItemModel Class
+  
+  ### A Few More ItemModel Properties
+  
+  ### API Provider Implementation
+  
+  ### Fetching Individual Items
+
 ## Testing with Flutter and Dart
+
+  ### Testing with Dart
+  
+  ### A Few Imports
+  
+  ### Writing Expectations
+  
+  ### Mocking HTTP Requests
+  
+  ### Returning JSON
+  
+  ### Testing FetchItem
 
 ## Offline Data Storage
 
+  ### SQLite DB Provider
+  
+  ### Database Imports
+  
+  ### Async Constructors
+  
+  ### Creating a DB Connection
+  
+  ### Creating Tables with SQLite
+  
+  ### Adding Table Columns
+  
+  ### Issuing Queries
+  
+  ### Multiple Named Constructors
+  
+  ### Massaging DB Return Maps
+  
+  ### Turning Class Instances to Maps
+  
+  ### Implementing the Repository
+  
+  ### More on the Repository
+  
+  ### Type Annotations
+  
+  ### Casting Lists
+
 ## Type Design
+
+  ### More on the Repository
+  
+  ### Abstract Classes
+  
+  ### The Need for Abstract Classes
+  
+  ### Why Abstract Classes?
+  
+  ### More on Abstract Classes
+  
+  ### Repository Interface Design
+  
+  ### Defining the Source
+  
+  ### Cache Definitions
+  
+  ### Lists of Sources and Caches
+  
+  ### Ultimate Reusability
+  
+  ### Quick Gotcha
+  
+  ### Another Quick Gotcha!
+  
+  ### FetchTopIds Implementation
 
 ## On Demand Widget Rendering
 
+  ### App Setup
+  
+  ### A Touch of Boilerplate
+  
+  ### Data Fetching Concerns
+  
+  ### Solution Outline
+  
+  ### FutureBuilder in Action
+  
+  ### The Stories Provider
+  
+  ### Bloc Design
+  
+  ### Exposing Bloc Getters
+  
+  ### Wiring up the Stories Provider
+  
+  ### Bloc Testing
+  
+  ### Type Annotations Solve Problems
+  
+  ### Circular Progress Indicator
+  
+  ### Item Fetching Architecture
+  
+  ### Giant Gotcha with StreamBuilder
+  
+  ### Giant Gotcha Solution
+  
+  ### Implementing ScanStreamTransformer
+  
+  ### Finishing the ScanStreamTransformer
+  
+  ### Adding the Items Controller
+  
+  ### A Gotcha Around Streams? Impossibe!
+  
+  ### Single Transformer Application
+  
+  ### The ListView Tile
+  
+  ### StreamBuilder Setup
+  
+  ### Wrapping Up the FutureBuilder
+  
+  ### Double Gotcha!
+  
+  ### Stream Subscriptions
+  
+  ### Stream Subscription Fix
+  
+  ### Additional Streams
+  
+  ### A Laborious Refactor
+  
+  ### Result of Refactor
+  
+  ### Quick Debug Session
+  
+  ### Resolving Database Conflicts
+  
+  ### Building Story Tiles
+  
+  ### Comments Icon
+  
+  ### Applying Dividers with Height
+  
+  ### Loading Container Stand-in
+  
+  ### Building the Loading Container
+  
+  ### Showing the Loading Container
+  
+  ### Long-lived Cache Values
+  
+  ### Swipe to Refresh Indicator
+  
+  ### Implementing a Refresh Widget
+  
+  ### Clearing Database Tables
+  
+  ### Communicating a Future to onRefresh
+
 ## Navigation with Flutter
+
+  ### Navigation in Flutter
+  
+  ### Map Based Routing
+  
+  ### OnGenerateRoute-Based Navigation
+  
+  ### OnGenereateRoute Implementation
+  
+  ### Navigating in Style!
+  
+  ### A PageRoute for NewsDetail
+  
+  ### A Scaffold in NewsDetail
+  
+  ### Parsing Route Settings
+  
+  ### The Comments Bloc Provider
+  
+  ### Comments Bloc Design
+  
+  ### More on Comments Bloc
+  
+  ### Recursive Data Fetching
+  
+  ### Quick Fix
+  
+  ### Connecting the Comments Provider
+  
+  ### Testing Recursive Fetching
+  
+  ### Consuming the Item Map
+  
+  ### Displaying the Story Title
+  
+  ### Text Styling
+  
+  ### Container Alignment
+  
+  ### Building the Comments List
+  
+  ### More Logic Extraction
+  
+  ### The Comment Widget
+  
+  ### Comment's FutureBuilder
+  
+  ### Showing Individual Comments
+  
+  ### Recursive Rendering
+  
+  ### Styling the Commment List
+  
+  ### Defaulting Null Values
+  
+  ### Handling Deleted Comments
+  
+  ### Nested Comments
+  
+  ### ListTile's ContentPadding Property
+  
+  ### Replacing Placeholder Characters
+  
+  ### Loading Containers for Comments
+  
+  ### App Wrapup
+  
+  ### Last Fix!
 
 ## Appendix One: Building Open Source with Dart
 
+  ### Dart Local Installation
+  
+  ### Dart Install on Mac
+  
+  ### Editor Setup for Dart
+  
+  ### App Overview
+  
+  ### Folder and File Structure
+  
+  ### The PubSpec File
+  
+  ### Running Dart Files
+  
+  ### Program Design Methodology
+  
+  ### Class Creation
+  
+  ### Terminal Design
+  
+  ### Terminal Implementation
+  
+  ### Stdout and Stdin
+  
+  ### Import Statements
+  
+  ### Stdout Instance
+  
+  ### More on Import Statements
+  
+  ### Testing the Import Class
+  
+  ### Checking Operating System
+  
+  ### Clearing Windows Terminal
+  
+  ### Clearing Other Terminals
+  
+  ### Testing ClearScreen
+  
+  ### Collecting Input Over Stdin
+  
+  ### Option Class Fields
+  
+  ### Adding Dynamic Fields
+  
+  ### Printing Individual Options
+  
+  ### Testing Option Printing
+  
+  ### List Shortcomings
+  
+  ### Maps in Dart
+  
+  ### Refactor to Maps
+  
+  ### The Prompter Class
+  
+  ### Testing the Prompter
+  
+  ### Extracting the Terminal
+  
+  ### Var vs Final for Variables
+  
+  ### Final's Affect on Values
+  
+  ### Const's Dual Nature
+  
+  ### Const's Behavior by Type
+  
+  ### Marking Terminal as Const
+  
+  ### Private Variables
+  
+  ### Finishing Prompter
+  
+  ### Error Handling
+  
+  ### Asking Binary Questions
+  
+  ### Testing Binary Inputs
+  
+  ### Code Similarities
+  
+  ### Refactor for Code Reuse
+  
+  ### More on Private
+  
+  ### Central Lib File
+  
+  ### A Single Export Point
+  
+  ### A Relevant Example File
+  
+  ### Outstanding Project Config
+  
+  ### Uploading the Prompter Lib
+
 ## Apprendix Two: Building a Dart CLI
 
-## Appendix
+  ### App Overview
+  
+  ### Project Setup
+  
+  ### Importing Library Code
+  
+  ### Forcibly Exiting a Program
+  
+  ### Prompting for File Type
+  
+  ### Implementation Flow
+  
+  ### Working with the Current Directory
+  
+  ### Filtering Non-Files
+  
+  ### Filtering Non-Images
+  
+  ### Building Options from Images
+  
+  ### Testing Image Selection
+  
+  ### Converting Images
+  
+  ### The ConvertImage Function
+  
+  ### Reading File Contents
+  
+  ### Encoding to JPG or PNG
+  
+  ### Writing Files to the Hard Drive
+  
+  ### Returning the Image Name
+  
+  ### Testing Image Conversion
+  
+  ### Opening the Image
 
 ## References
 
