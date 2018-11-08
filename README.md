@@ -251,7 +251,7 @@ Class (House Blueprints) -> Instances (Each Instance is a House)
 | name | 
 | printName | 
 
-```
+```dart
 class Person
 {
   String firstName;
@@ -265,7 +265,7 @@ class Person
 
 ### Creating Class Instances
 
-```
+```dart
 void main()
 {
   var person = new Person();
@@ -288,7 +288,7 @@ class Person
 
 ### Constructor Functions
 
-```
+```dart
 void main()
 {
   var person = new Person('Stephen');
@@ -319,7 +319,7 @@ class Person
 
 ### Review on Constructors
 
-```
+```dart
 class Person
 {
   String firstName;
@@ -330,7 +330,7 @@ class Person
 
 Person - *Constructor function because it has the same name as the class*
 
-```
+```dart
 new Person('Stephen');
 ```
 
@@ -342,43 +342,258 @@ new Person('Stephen');
 
 ## Staying on Target with Dart
 
-  ### App Overview
+### App Overview
+
+**Deck of Cards**
+
+- Ace of Diamonds
+
+- Two of Diamonds
+
+- Three of Diamonds
+
+- Four of Diamonds
+
+- Ace of Spades
+
+**Deck Program**
+
+- Make a Deck - *Create a new deck of playing cards*
+
+- printCards - *Print all the cards in this deck*
+
+- shuffle - *Shuffle the cards in this deck*
+
+- cardsWithSuit - *Find all the cards with a given suit*
+
+- deal - *Deal out some number of cards from this deck*
+
+- removeCard - *Remove a specific card from the deck*
+
+### OOP Design Flow
+
+**Dart Program Design Flow**
+
+| Think about... |   | Then...  |  
+|---|---|---|
+| What different *types* of 'things' exist in our app? | -> | Create a dart 'class' to represent each type of 'thing' |
+| What pieces of data would be tied to each 'thing'? | -> | Create a 'field' on each class to hold that piece of data | 
+| How would we interact with each 'thing' and the data it contains? | -> | Add methods to represent each interaction | 
+| How do different 'things' interact with each other? | -> | Write code outside of a class to get classes to interact | 
+
+#### Deck Class
+
+| Fields | |
+|---|---|
+| name | type |
+
+| Methods |
+|---|
+| name | 
+
+#### Card Class
+
+| Fields | |
+|---|---|
+| name | type |
+
+| Methods |
+|---|
+| name | 
+
+```dart
+class Deck
+{
+
+}
+
+class Card
+{
+
+}
+```
+
+### Adding Fields to Classes
+
+#### Deck Class
+
+| Fields | |
+|---|---|
+| name | type |
+| cards | List<Card> |
+
+| Methods |
+|---|
+| name |  
+
+#### Card Class
+
+| Fields | |
+|---|---|
+| name | type |
+| suit | string |
+| rank | string |
+
+| Methods |
+|---|
+| name | 
+
+```dart
+class Deck
+{
+  List<Card> cards;
+}
+
+class Card
+{
+  String suit;
+  String rank;
+}
+```
+
+### Associated Methods
+
+#### Deck Class
+
+| Fields | |
+|---|---|
+| name | type |
+| cards | List<Card> |
+
+| Methods |
+|---|
+| name | 
+| printCards | 
+| shuffle | 
+| deal | 
+| removeCard | 
+
+#### Card Class
+
+| Fields | |
+|---|---|
+| name | type |
+| suit | string |
+| rank | string |
+
+| Methods |
+|---|
+| name | 
+| ??? | 
+
+### More Initialization with Constructors
+
+```dart
+class Deck
+{
+  List<Card> cards;
   
-  ### OOP Design Flow
+  Deck()
+  {
+    
+  }
+}
+
+class Card
+{
+  String suit;
+  String rank;
+}
+```
+
+### For Loops
+
+- ranks = ['Ace', 'Two', 'Three', 'Four', ...]
+
+- suit = ['Hearts', 'Diamonds', ...]
+
+For every suit in the suits list ...
+
+  * For every rank in the ranks list ...
   
-  ### Adding Fields to Classes
+    * Create a new card and add it to the 'cards' list
+
+```dart
+class Deck
+{
+  List<Card> cards;
   
-  ### Associated Methods
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        
+      }
+    }
+  }
+}
+
+class Card
+{
+  String suit;
+  String rank;
+}
+```
+
+### Adding Elements to Lists
+
+```dart
+class Deck
+{
+  List<Card> cards;
   
-  ### More Initialization with Constructors
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+      }
+    }
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
   
-  ### For Loops
-  
-  ### Adding Elements to Lists
-  
-  ### More on Variable Initialization
-  
-  ### Customizing Print Statements
-  
-  ### ToString on Cards
-  
-  ### Shuffling a List
-  
-  ### Annotating Argument Types
-  
-  ### Filtering Lists
-  
-  ### Annotating Argument Types
-  
-  ### Filtering Lists
-  
-  ### Shorthand Function Syntax
-  
-  ### Removing Individual Records
-  
-  ### RemoveCard Implementation
-  
-  ### Named Parameters
+  Card(this.rank, this.suit);
+}
+```
+
+### More on Variable Initialization
+
+### Customizing Print Statements
+
+### ToString on Cards
+
+### Shuffling a List
+
+### Annotating Argument Types
+
+### Filtering Lists
+
+### Annotating Argument Types
+
+### Filtering Lists
+
+### Shorthand Function Syntax
+
+### Removing Individual Records
+
+### RemoveCard Implementation
+
+### Named Parameters
 
 ## Flutter Environment Setup - MacOS
 
