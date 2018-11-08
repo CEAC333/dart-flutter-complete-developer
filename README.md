@@ -5,36 +5,340 @@
   ### How to Get Help
   
   ### Course Organization
+  
+  Dart (Programming Language) + Flutter (Mobile UI Framework) = Usable App
+  
+  **Course Flow**
+  
+  - Basics of the Dart Language (Browser-based Editor)
+  
+  - Building Projects + Packages with Dart (Local Code Editor)
+  
+  - Building Apps with Dart + Flutter (Local Code Editor + Mobile Device Emulator)
 
 ## A Dart Introduction
 
   ### Dart Overview
   
+  **Few Notes on Dart**
+  
+  - Object-Oriented Language - (*Most of our time is spent thinking about how to organize code in objects, or 'classes'*)
+  
+  - Statically Typed - (*Variables contain data of a single 'type', like an integer or a string*)
+  
+  - C-style Syntax - (*Syntax of the language is very similar to C, C#, Javascript*)
+  
+  - Multiple Runtime Environments - (*Transpiled to Javascript to run in the browser. Runs in the 'Dart VM' to execute from a command line. Compiled to machine code to run on mobile devices*)
+  
   ### The Dartpad Editor
+  
+  - https://dartpad.dartlang.org/ - Browser based tool for *playing around* with Dart
   
   ### Our First Program
   
-  ### Pulling the Pieces Apart
+```dart
+void main() 
+{
+  var name = myName();
   
-  ### Functions in Dart
+  print('My name is $name');
+}
+
+String myName() 
+{
+  return 'Stephen';
+}
+```
+
+### Pulling the Pieces Apart
+
+```
+var name = myName();
+```
+
+var - *Declares a variable*
+
+name - *Variable's name is 'name'*
+
+var name - *Variable Declaration*
+
+myName(); - *Runs the 'myName' function*
+
+= myName(); - *Variable Initialization*
+
+### Functions in Dart
+
+```dart
+String myName() 
+{
+  return 'Stephen';
+}
+```
+
+String - *Type of value that will be returned*
+myName - *Name of Function*
+() - *Argument List*
+return 'Stephen'; - *Function Body*
+
+**Time**
+
+- Program starts up
+
+- Dart finds and runs the 'main' function
+
+- Main function starts up the rest of our app
+
+### Introduction to Types
+
+**Types in Dart**
+
+- Every value has a 'type'
+
+- Every variable has a type it can reference
+
+- Once a variable has a 'type' associated, the variables type cannot change
+
+- We don't always have to annotate types, Dart can guess for us
+
+**Your Computers Memory**
+
+```dart
+name -> 'Stephen'
+```
+
+name - *Variable that can reference type String*
+'Stephen' - *Value with type String*
+
+TYPE ERROR EXAMPLE:
+
+```dart
+void main() 
+{
+  var name = myName();
   
-  ### Introduction to Types
+  name = 123;
   
-  ### Why Use Types?
+  print('My name is $name');
+}
+
+String myName() 
+{
+  return 'Stephen';
+}
+```
+
+`A value of type 'int' can't be assigned to a variable of type 'String'`
+
+```dart
+name -> 'Stephen'
+```
+
+name - *Variable that can reference type String*
+'Stephen' - *Value with type String*
+
+TYPE INFERENCE EXAMPLE:
+
+```dart
+void main() 
+{
+  var name = myName();
   
-  ### String Interpolation
+  print('My name is $name');
+}
+
+myName() 
+{
+  return 'Stephen';
+}
+```
+
+### Why Use Types?
+
+| Type | Example Value |
+|---|---|
+| String | 'hi', 'Hows it going?', 'Thats great' |
+| int  | 0, -999, 876000   |
+| double  | 0.0001, -999.814, 100.1 |
+| dynamic  | 'Hi', -0.0004, 90  |
+
+TYPE ERROR EXAMPLE:
+
+```dart
+void main() 
+{
+  var name = myName();
+  name.length;
+  print('My name is $name');
+}
+
+int myName() 
+{
+  return 123;
+}
+```
+
+`The getter 'length' isn't defined for the class 'int'`
+
+**Why types at all?**
+
+- Performance can be improved
+
+- Easier to work on large projects
+
+- Less of a need to write unit tests
+
+- Automatically find simple errors
+
+### String Interpolation
+
+```dart
+void main() 
+{
+  var name = myName();
+
+  print('My name is ${name.length}');
+}
+
+myName() 
+{
+  return 'Stephen';
+}
+```
+
+`My name is Stephen.length`
+
+```dart
+void main() 
+{
+  var name = myName();
+
+  print('My name is $name.length');
+}
+
+myName() 
+{
+  return 'Stephen';
+}
+```
+
+`My name is 7`
+
+### Object Oriented Programming in Dart
+
+- Object (Pieces of Data <- Methods)
+
+Piece of Data - *Information about our application hidden from other parts of the app*
+
+Method - *Functions that govern access to data stored in the object*
+
+- Class (Pieces of Data <- Methods) - Template of the Objects
+
+- Object/Instance ('red', 123 <- Methods)
+
+Class (House Blueprints) -> Instances (Each Instance is a House)
+
+### Creating Classes
+
+#### Person Class
+
+| Fields | |
+|---|---|
+| name | type |
+| firstName | string |
+
+| Methods |
+|---|
+| name | 
+| printName | 
+
+```
+class Person
+{
+  String firstName;
   
-  ### Object Oriented Programming in Dart
+  printName() 
+  {
+    print(firstName);
+  }
+}
+```
+
+### Creating Class Instances
+
+```
+void main()
+{
+  var person = new Person();
   
-  ### Creating Classes
+  person.firstName = 'Stephen';
   
-  ### Creating Class Instances
+  person.printName();
+}
+
+class Person
+{
+  String firstName;
   
-  ### Constructor Functions
+  printName() 
+  {
+    print(firstName);
+  }
+}
+```
+
+### Constructor Functions
+
+```
+void main()
+{
+  var person = new Person('Stephen');
   
-  ### Review on Constructors
+  person.printName();
+}
+
+class Person
+{
+  String firstName;
   
-  ### Completed Code
+  Person(this.firstName);
+  
+  printName() 
+  {
+    print(firstName);
+  }
+}
+```
+
+**Time**
+
+- Call classes constructor function with arguments
+
+- Constructor function executed, does some initial setup
+
+- New instance of class returned
+
+### Review on Constructors
+
+```
+class Person
+{
+  String firstName;
+  
+  Person(this.firstName);
+}
+```
+
+Person - *Constructor function because it has the same name as the class*
+
+```
+new Person('Stephen');
+```
+
+'Stephen' - *First argument to constructor function*
+
+### Completed Code
+
+- https://github.com/StephenGrider/FlutterCasts/
 
 ## Staying on Target with Dart
 
