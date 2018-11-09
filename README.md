@@ -543,6 +543,11 @@ class Card
 ### Adding Elements to Lists
 
 ```dart
+void main()
+{
+  new Deck();
+}
+
 class Deck
 {
   List<Card> cards;
@@ -557,6 +562,7 @@ class Deck
       for(var rank in ranks)
       {
         var card = new Card(rank, suit);
+        cards.add(card);
       }
     }
   }
@@ -571,29 +577,708 @@ class Card
 }
 ```
 
+`Uncaught exception: C.JSNull_methods.add$1 is not a function`
+
 ### More on Variable Initialization
+
+```dart
+List<Card> cards
+```
+
+List<Card> - *Declares a field*
+  
+cards - *Fields name is 'cards'*
+
+List<Card> cards - *Variable declaration*
+  
+**Your Computers Memory**
+
+cards -> ???
+
+cards (Variable that can reference type List<Card>)
+  
+cards -> null
+
+```dart
+void main()
+{
+  new Deck();
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+}
+```
 
 ### Customizing Print Statements
 
+```dart
+void main()
+{
+  var deck = new Deck();
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+}
+```
+
+`Instance of 'Deck'`
+
+```
+print ( value )
+```
+
+value - *Do you have a 'toString()' method? If so, run it!*
+
+```dart
+void main()
+{
+  var deck = new Deck();
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return 'This is a deck!';
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+}
+```
+
 ### ToString on Cards
+
+```dart
+void main()
+{
+  var deck = new Deck();
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
 
 ### Shuffling a List
 
+- Dart Documentation - https://api.dartlang.org/stable/2.0.0/index.html
+
+- List Class Docs - https://api.dartlang.org/stable/2.0.0/dart-core/List-class.html
+
+- Look for the method `shuffle`
+
+```dart
+void main()
+{
+  var deck = new Deck();
+  deck.shuffle();
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
+
 ### Annotating Argument Types
+
+**Deck of Cards**
+
+- Ace of Diamonds
+
+- Two of Diamonds
+
+- Three of Diamonds
+
+- Aces of Spades
+
+- Two of Spades
+
+--------> cardsWithSuit('Spades') -------->
+
+- Ace of Spades
+
+- Two of Spades
+
+```dart
+void main()
+{
+  var deck = new Deck();
+  deck.shuffle();
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+  
+  cardsWithSuit(String suit)
+  {
+    
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
 
 ### Filtering Lists
 
+```dart
+void main()
+{
+  var deck = new Deck();
+  deck.shuffle();
+  print(deck.cardsWithSuit('Diamonds'));
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+  
+  cardsWithSuit(String suit)
+  {
+    return cards.where((card) 
+    {
+      return card.suit == suit;
+    });
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
+
 ### Annotating Argument Types
 
+```dart
+void main()
+{
+  var deck = new Deck();
+  deck.shuffle();
+  print(deck.cardsWithSuit('Diamonds'));
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+  
+  cardsWithSuit(String suit)
+  {
+    return cards.where((card) => card.suit == suit);
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
+
 ### Filtering Lists
+
+- List Class Docs - https://api.dartlang.org/stable/2.0.0/dart-core/List-class.html
+
+- Look for the method `sublist`
+
+**Cards**
+
+- Card 0
+- Card 1
+- Card 2
+- Card 3
+- Card 4
+- Card 5
+
+**Memory**
+
+List:
+
+- 0 -> Card # 1 
+- 1 -> Card # 2 
+- 2 -> Card # 3 
+- 3 -> Card # 4 
+
+SubList:
+
+- 0 -> Card # 1 
+- 1 -> Card # 2 
 
 ### Shorthand Function Syntax
 
+```dart
+void main()
+{
+  var deck = new Deck();
+  
+  print(deck);
+  print(deck.deal(5));
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+  
+  cardsWithSuit(String suit)
+  {
+    return cards.where((card) => card.suit == suit);
+  }
+  
+  deal(int handSize)
+  {
+    var hand = cards.sublist(0, handSize);
+    cards = cards.sublist(handSize);
+    
+    return hand;
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
+
 ### Removing Individual Records
+
+- https://api.dartlang.org/stable/2.0.0/dart-core/List-class.html
+
+- Method `removeWhere`
 
 ### RemoveCard Implementation
 
+```dart
+void main()
+{
+  var deck = new Deck();
+  
+  deck.removeCard('Diamonds', 'Ace');
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var suit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+  
+  cardsWithSuit(String suit)
+  {
+    return cards.where((card) => card.suit == suit);
+  }
+  
+  deal(int handSize)
+  {
+    var hand = cards.sublist(0, handSize);
+    cards = cards.sublist(handSize);
+    
+    return hand;
+  }
+  
+  removeCars(String suit, String rank)
+  {
+    cards.removeWhere((card) => (card.suit == suit) && (card.rank == rank));
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card(this.rank, this.suit);
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
+
 ### Named Parameters
+
+```dart
+void main()
+{
+  var deck = new Deck();
+  
+  deck.removeCard('Diamonds', 'Ace');
+  print(deck);
+}
+
+class Deck
+{
+  List<Card> cards = [];
+  
+  Deck()
+  {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades'];
+    
+    for(var mySuit in suits)
+    {
+      for(var rank in ranks)
+      {
+        var card = new Card(
+          suit: mySuit, 
+          rank: rank
+        );
+        cards.add(card);
+      }
+    }
+  }
+  
+  toString()
+  {
+    return cards.toString();
+  }
+  
+  shuffle()
+  {
+    cards.shuffle();
+  }
+  
+  cardsWithSuit(String suit)
+  {
+    return cards.where((card) => card.suit == suit);
+  }
+  
+  deal(int handSize)
+  {
+    var hand = cards.sublist(0, handSize);
+    cards = cards.sublist(handSize);
+    
+    return hand;
+  }
+  
+  removeCars(String suit, String rank)
+  {
+    cards.removeWhere((card) => (card.suit == suit) && (card.rank == rank));
+  }
+}
+
+class Card
+{
+  String rank;
+  String suit;
+  
+  Card({this.rank, this.suit});
+  
+  toString()
+  {
+    return '$rank of $suit';
+  }
+}
+```
 
 ## Flutter Environment Setup - MacOS
 
