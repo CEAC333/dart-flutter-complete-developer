@@ -1291,7 +1291,7 @@ class Card
   ### XCODE License
   
   ### Generating Flutter Projects
-
+  
 ## MacOS Setup - Android
 
   ### Android Setup on MacOS
@@ -1320,51 +1320,81 @@ class Card
 
 ## Flutter Setup on PC
 
-  ### Flutter Install
-  
-  ### More Flutter Installation
-  
-  ### Android Install
-  
-  ### Additional Dependencies
-  
-  ### Generating a Project
-  
-  ### Selecting an Image
-  
-  ### Starting the Emulator
-  
-  ### Finishing Android Setup
+### Flutter Install
+
+- https://flutter.io/docs/get-started/install/windows
+
+### More Flutter Installation
+
+### Android Install
+
+### Additional Dependencies
+
+### Generating a Project
+
+- Start New Android Studio Project -> Next -> Next -> Next -> Next
+
+### Selecting an Image
+
+- AVD Manager -> Create Virtual Device
+
+### Starting the Emulator
+
+### Finishing Android Setup
+
+```
+flutter emulators
+```
+
+```
+flutter run
+```
 
 ## App Building Time!
 
-  ### Code Editor Setup
-  
-  ### What's Flutter About, Anyways?
-  
-  ### App Overview
-  
-  ### The Four Step Design Process
-  
-  ### Import Statements
-  
-  ### Creating Widgets
-  
-  ### Displaying Content on Screen
-  
-  ### Showing a Scaffold
-  
-  ### Customizing the App Bar
-  
-  ### Named Parameter Clarification
-  
-  ### Required Parameters
-  
-  ### Child Parameters
-  
-  ### Displaying Icons
-  
-  ### Adding Custom Widgets
+### Code Editor Setup
+
+- https://code.visualstudio.com/download
+
+**1. Download VS Code**
+
+In your browser, navigate to https://code.visualstudio.com/download and download the version of VS Code appropriate for your operating system.
+
+**2. Install VS Code**
+
+Once you've downloaded the installer, run it to start up the VS Code installer.
+
+**3. Start VS Code**
+
+**4. Install the Flutter editor package**
+
+With VS Code open, find the menu bar at the top marked 'View' then click on 'Extensions'.  This will open up a side bar tab used to install extensions.  Search for a package called 'Flutter' and click the green 'install' button. 
+
+### What's Flutter About, Anyways?
+
+### App Overview
+
+### The Four Step Design Process
+
+### Import Statements
+
+### Creating Widgets
+
+### Displaying Content on Screen
+
+### Showing a Scaffold
+
+### Customizing the App Bar
+
+### Named Parameter Clarification
+
+### Required Parameters
+
+### Child Parameters
+
+### Displaying Icons
+
+### Adding Custom Widgets
 
 ## State Design with Flutter Apps
 
