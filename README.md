@@ -1282,15 +1282,19 @@ class Card
 
 ## Flutter Environment Setup - MacOS
 
-  ### Flutter Setup on MacOS
-  
-  ### SDK Extraction
-  
-  ### Editing the PATH Variable
-  
-  ### XCODE License
-  
-  ### Generating Flutter Projects
+### Flutter Setup on MacOS
+
+### SDK Extraction
+
+### Editing the PATH Variable
+
+### XCODE License
+
+### Generating Flutter Projects
+
+```
+flutter create pics
+```
   
 ## MacOS Setup - Android
 
@@ -1372,7 +1376,60 @@ With VS Code open, find the menu bar at the top marked 'View' then click on 'Ext
 
 ### What's Flutter About, Anyways?
 
+**How do we make Flutter Apps?**
+
+- We build widgets that control UI elements on the screen
+
+- We mix and match widgets to build the desired UI for the app we're making
+
+- Some widgets are provided by Flutter
+
+- Some are created by you and me
+
+**Example**
+
+- Your Todos - *(AppBar)*
+  * All  - *(TabBar)*
+  * Today - *(TabBar)*
+  * Tomorrow - *(TabBar)*
+  
+- Todos - *(BottomNavigationBar)*
+
+- Contacts - *(BottomNavigationBar)*
+
+- Calls - *(BottomNavigationBar)*
+
+- **+** - *(FloatingActionButton)*
+
+**Reference** 
+
+- https://flutter.io/docs/reference/widgets/catalog
+
+- https://docs.flutter.io/flutter/material/Scaffold-class.html
+
 ### App Overview
+
+**General Idea**
+
+- V1
+  * Let's See Images!
+  * **+**
+
+- V2
+  * Let's See Images!
+  * **+**
+  * Image Container (Image, Image Title)
+  
+- V3
+  * Let's See Images!
+  * **+**
+  * Multiple Image Containers (Image, Image Title)
+  
+Go to the folder `pics` where's our flutter project and run it:
+
+```
+flutter run
+```
 
 ### The Four Step Design Process
 
