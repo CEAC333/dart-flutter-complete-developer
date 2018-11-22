@@ -1433,15 +1433,135 @@ flutter run
 
 ### The Four Step Design Process
 
+Open `pics` folder on VSCode
+
+pics > lib > `main.dart`
+
+```
+// I need to import a helper library
+// from flutter to get content on the screen
+
+// Define a 'main' function to run when our app starts
+
+// Create a new text widget to show some text 
+// on the screen
+
+// Take that widget and get it on the screen
+```
+
 ### Import Statements
+
+**Imports**
+
+- **Flutter Standard Library** - animation, gestures, material, physics, rendering, scheduler
+
+- **Our App** - main.dart
+
+- **Dart Standard Library** - dart:io, dart:core, dart:async, dart:collection, dar:mirrors, dar:isolate
+
+```
+// I need to import a helper library
+// from flutter to get content on the screen
+import 'package:flutter/material.dart';
+
+// Define a 'main' function to run when our app starts
+
+// Create a new text widget to show some text 
+// on the screen
+
+// Take that widget and get it on the screen
+```
+
+```
+import 'package: flutter /material.dart'
+```
+
+- import - *We are trying to import some code from somewhere else*  
+- 'package: - *We are importing code fromm a third party package, not a dart standard lib*
+- flutter - *The name of the package we are importing*
+- /material.dart' - *The file we are importing from that package*
 
 ### Creating Widgets
 
+```
+// I need to import a helper library
+// from flutter to get content on the screen
+import 'package:flutter/material.dart';
+
+// Define a 'main' function to run when our app starts
+void main()
+{
+  // Create a new text widget to show some text 
+  // on the screen
+  var app = MaterialApp(
+    home: Text('Hi there!'),
+  );
+
+  // Take that widget and get it on the screen
+}
+```
+
 ### Displaying Content on Screen
+
+```
+// I need to import a helper library
+// from flutter to get content on the screen
+import 'package:flutter/material.dart';
+
+// Define a 'main' function to run when our app starts
+void main()
+{
+  // Create a new text widget to show some text 
+  // on the screen
+  var app = MaterialApp(
+    home: Text('Hi there!'),
+  );
+
+  // Take that widget and get it on the screen
+  runApp(app);
+}
+```
 
 ### Showing a Scaffold
 
+- https://flutter.io/docs/reference/widgets/catalog
+- https://docs.flutter.io/flutter/material/Scaffold-class.html
+
+```
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(),
+    ),
+  );
+
+  runApp(app);
+}
+```
+
 ### Customizing the App Bar
+
+- https://docs.flutter.io/flutter/material/AppBar-class.html
+
+```
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Lets see some images!'),
+      ),
+    ),
+  );
+
+  runApp(app);
+}
+```
 
 ### Named Parameter Clarification
 
