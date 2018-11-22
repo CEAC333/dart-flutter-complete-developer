@@ -1437,7 +1437,7 @@ Open `pics` folder on VSCode
 
 pics > lib > `main.dart`
 
-```
+```dart
 // I need to import a helper library
 // from flutter to get content on the screen
 
@@ -1459,7 +1459,7 @@ pics > lib > `main.dart`
 
 - **Dart Standard Library** - dart:io, dart:core, dart:async, dart:collection, dar:mirrors, dar:isolate
 
-```
+```dart
 // I need to import a helper library
 // from flutter to get content on the screen
 import 'package:flutter/material.dart';
@@ -1483,7 +1483,7 @@ import 'package: flutter /material.dart'
 
 ### Creating Widgets
 
-```
+```dart
 // I need to import a helper library
 // from flutter to get content on the screen
 import 'package:flutter/material.dart';
@@ -1503,7 +1503,7 @@ void main()
 
 ### Displaying Content on Screen
 
-```
+```dart
 // I need to import a helper library
 // from flutter to get content on the screen
 import 'package:flutter/material.dart';
@@ -1527,7 +1527,7 @@ void main()
 - https://flutter.io/docs/reference/widgets/catalog
 - https://docs.flutter.io/flutter/material/Scaffold-class.html
 
-```
+```dart
 import 'package:flutter/material.dart';
 
 void main()
@@ -1546,7 +1546,7 @@ void main()
 
 - https://docs.flutter.io/flutter/material/AppBar-class.html
 
-```
+```dart
 import 'package:flutter/material.dart';
 
 void main()
